@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Trouser Size</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-64">
+        <h1 class="text-2xl font-bold mb-4 text-center">Select Your Trouser Size</h1>
+        <select id="sizeDropdown" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" disabled selected>Select</option>
+            <!-- General Sizes -->
+            <option value="XS">XS (Extra Small)</option>
+            <option value="S">S (Small)</option>
+            <option value="M">M (Medium)</option>
+            <option value="L">L (Large)</option>
+            <option value="XL">XL (Extra Large)</option>
+            <option value="XXL">XXL (Double Extra Large)</option>
+            <!-- Combined Waist/Length Sizes -->
+            <option value="30/30">30/30</option>
+            <option value="30/32">30/32</option>
+            <option value="30/34">30/34</option>
+            <option value="32/30">32/30</option>
+            <option value="32/32">32/32</option>
+            <option value="32/34">32/34</option>
+            <option value="34/30">34/30</option>
+            <option value="34/32">34/32</option>
+            <option value="34/34">34/34</option>
+            <option value="36/30">36/30</option>
+            <option value="36/32">36/32</option>
+            <option value="36/34">36/34</option>
+            <option value="38/30">38/30</option>
+            <option value="38/32">38/32</option>
+            <option value="38/34">38/34</option>
+        </select>
+    </div>
+
+    <script>
+        const dropdown = document.getElementById('sizeDropdown');
+        dropdown.addEventListener('change', (event) => {
+            if (event.target.value) {
+                dropdown.classList.add('text-black');
+            }
+        });
+    </script>
+</body>
+</html>
